@@ -1,11 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button, Card, Input } from "@heroui/react";
+import { authClient } from "@/lib/auth-client";
 
 export default function RegisterPage() {
-  const handleRegister = (e) => {
+  const router = useRouter();
+
+  const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleRegister = async (e) => {
     e.preventDefault();
+
+    setErrorMessage("");
+    setLoading(true);
 
     const formData = new FormData(e.currentTarget);
     const name = formData.get("name");
@@ -13,7 +24,30 @@ export default function RegisterPage() {
     const image = formData.get("image");
     const password = formData.get("password");
 
-    console.log({ name, email, image, password });
+    const { data, error } = await authClient.signUp.email({
+  name,
+  email,
+  password,
+  image,
+});
+
+    console.log({ data, error });
+
+    if (error) {
+      setErrorMessage(error.message || "Registration failed. Please try again.");
+      setLoading(false);
+      return;
+    }
+
+    router.push("/login");
+    router.refresh();
+  };
+
+  const handleGoogleRegister = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "/",
+    });
   };
 
   return (
@@ -35,6 +69,12 @@ export default function RegisterPage() {
               Login
             </Link>
           </div>
+
+          {errorMessage && (
+            <p className="mb-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-semibold text-red-600">
+              {errorMessage}
+            </p>
+          )}
 
           <form onSubmit={handleRegister} className="flex flex-col gap-5">
             <Input
@@ -76,9 +116,10 @@ export default function RegisterPage() {
 
             <Button
               type="submit"
+              disabled={loading}
               className="mt-2 h-12 rounded-full bg-orange-500 text-base font-bold text-white hover:bg-orange-600"
             >
-              Register
+              {loading ? "Registering..." : "Register"}
             </Button>
           </form>
 
@@ -92,6 +133,7 @@ export default function RegisterPage() {
 
           <button
             type="button"
+            onClick={handleGoogleRegister}
             className="h-12 w-full rounded-full border border-slate-200 bg-white text-sm font-bold text-slate-700 hover:bg-slate-50"
           >
             Continue with Google

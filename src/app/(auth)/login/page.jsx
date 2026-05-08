@@ -1,17 +1,52 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button, Card, Input } from "@heroui/react";
+import { authClient } from "@/lib/auth-client";
 
 export default function LoginPage() {
-  const handleLogin = (e) => {
+  const router = useRouter();
+
+  const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleLogin = async (e) => {
     e.preventDefault();
+
+    setErrorMessage("");
+    setLoading(true);
 
     const formData = new FormData(e.currentTarget);
     const email = formData.get("email");
     const password = formData.get("password");
 
     console.log({ email, password });
+
+    const { data, error } = await authClient.signIn.email({
+      email,
+      password,
+      callbackURL: "/",
+    });
+
+    if (error) {
+      setErrorMessage(error.message || "Login failed. Please try again.");
+      setLoading(false);
+      return;
+    }
+
+    if (data) {
+      router.push("/");
+      router.refresh();
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "/",
+    });
   };
 
   return (
@@ -34,6 +69,12 @@ export default function LoginPage() {
             </Link>
           </div>
 
+          {errorMessage && (
+            <p className="mb-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-semibold text-red-600">
+              {errorMessage}
+            </p>
+          )}
+
           <form onSubmit={handleLogin} className="flex flex-col gap-5">
             <Input
               name="email"
@@ -55,9 +96,10 @@ export default function LoginPage() {
 
             <Button
               type="submit"
+              disabled={loading}
               className="mt-2 h-12 rounded-full bg-orange-500 text-base font-bold text-white hover:bg-orange-600"
             >
-              Login
+              {loading ? "Logging in..." : "Login"}
             </Button>
           </form>
 
@@ -71,6 +113,7 @@ export default function LoginPage() {
 
           <button
             type="button"
+            onClick={handleGoogleLogin}
             className="h-12 w-full rounded-full border border-slate-200 bg-white text-sm font-bold text-slate-700 hover:bg-slate-50"
           >
             Continue with Google

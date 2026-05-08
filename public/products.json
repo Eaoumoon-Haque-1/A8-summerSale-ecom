@@ -18,7 +18,7 @@
     "rating": 4.8,
     "stock": 25,
     "description": "Lightweight SPF 50 sunscreen for strong summer sunlight and daily skin protection.",
-    "image": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?q=80&w=900&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1623676714504-edd78728155e?q=80&w=900&auto=format&fit=crop",
     "category": "Skincare"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.6,
     "stock": 14,
     "description": "A breathable wide-brim summer hat made for beach walks, vacations, and sunny-day outfits.",
-    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=900&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1758900561440-4014bdd78c10?q=80&w=900&auto=format&fit=crop",
     "category": "Beachwear"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.5,
     "stock": 20,
     "description": "A soft and breathable summer shirt made with lightweight fabric for comfortable everyday wear.",
-    "image": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=900&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1715533173683-737d4a2433dd?q=80&w=900&auto=format&fit=crop",
     "category": "Outfits"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.9,
     "stock": 30,
     "description": "A durable insulated bottle that keeps drinks cool during hot summer days, workouts, and travel.",
-    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?q=80&w=900&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1700506844206-ec2f9e2a65cd?q=80&w=900&auto=format&fit=crop",
     "category": "Travel"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.6,
     "stock": 16,
     "description": "A spacious tote bag for carrying towels, sunscreen, sunglasses, books, and other beach essentials.",
-    "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1641934777532-d277296b111c?q=80&w=900&auto=format&fit=crop",
     "category": "Accessories"
   },
   {
@@ -73,7 +73,7 @@
     "rating": 4.4,
     "stock": 22,
     "description": "A refreshing face mist that helps cool and hydrate your skin during warm summer weather.",
-    "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=900&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1601066551508-6d9cb1b9de65?q=80&w=900&auto=format&fit=crop",
     "category": "Skincare"
   },
   {
@@ -84,7 +84,7 @@
     "rating": 4.7,
     "stock": 19,
     "description": "Comfortable summer sandals suitable for beach walks, casual outings, and vacation wear.",
-    "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=900&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1625318880107-49baad6765fd?q=80&w=900&auto=format&fit=crop",
     "category": "Footwear"
   }
 ]

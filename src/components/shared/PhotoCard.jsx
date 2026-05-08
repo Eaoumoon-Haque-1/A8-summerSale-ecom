@@ -4,7 +4,8 @@ import Link from "next/link";
 import { FaStar } from "react-icons/fa6";
 import { FiPackage } from "react-icons/fi";
 
-export default function ProductCard({ product }) {
+export default function PhotoCard({ product }) {
+    console.log(product);
   return (
     <Card className="group overflow-hidden rounded-3xl border border-orange-100 bg-white shadow-md shadow-orange-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
       <div className="relative aspect-square w-full overflow-hidden bg-orange-50">

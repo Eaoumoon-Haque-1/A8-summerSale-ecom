@@ -3,7 +3,6 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-slate-950">
-      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{

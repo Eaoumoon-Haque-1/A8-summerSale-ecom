@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 18,
+    "description": "Stylish UV protection sunglasses designed for sunny outdoor days, beach trips, and summer travel.",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=900&auto=format&fit=crop",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Hydrating Sunscreen SPF 50",
+    "brand": "GlowCare",
+    "price": 22,
+    "rating": 4.8,
+    "stock": 25,
+    "description": "Lightweight SPF 50 sunscreen for strong summer sunlight and daily skin protection.",
+    "image": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?q=80&w=900&auto=format&fit=crop",
+    "category": "Skincare"
+  },
+  {
+    "id": 3,
+    "name": "Beach Summer Hat",
+    "brand": "CoastWear",
+    "price": 18,
+    "rating": 4.6,
+    "stock": 14,
+    "description": "A breathable wide-brim summer hat made for beach walks, vacations, and sunny-day outfits.",
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=900&auto=format&fit=crop",
+    "category": "Beachwear"
+  },
+  {
+    "id": 4,
+    "name": "Lightweight Summer Shirt",
+    "brand": "BreezeFit",
+    "price": 28,
+    "rating": 4.5,
+    "stock": 20,
+    "description": "A soft and breathable summer shirt made with lightweight fabric for comfortable everyday wear.",
+    "image": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=900&auto=format&fit=crop",
+    "category": "Outfits"
+  },
+  {
+    "id": 5,
+    "name": "Insulated Water Bottle",
+    "brand": "AquaBreeze",
+    "price": 19,
+    "rating": 4.9,
+    "stock": 30,
+    "description": "A durable insulated bottle that keeps drinks cool during hot summer days, workouts, and travel.",
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?q=80&w=900&auto=format&fit=crop",
+    "category": "Travel"
+  },
+  {
+    "id": 6,
+    "name": "Beach Tote Bag",
+    "brand": "SunnyCarry",
+    "price": 24,
+    "rating": 4.6,
+    "stock": 16,
+    "description": "A spacious tote bag for carrying towels, sunscreen, sunglasses, books, and other beach essentials.",
+    "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop",
+    "category": "Accessories"
+  },
+  {
+    "id": 7,
+    "name": "Cooling Face Mist",
+    "brand": "FreshGlow",
+    "price": 12,
+    "rating": 4.4,
+    "stock": 22,
+    "description": "A refreshing face mist that helps cool and hydrate your skin during warm summer weather.",
+    "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=900&auto=format&fit=crop",
+    "category": "Skincare"
+  },
+  {
+    "id": 8,
+    "name": "Summer Beach Sandals",
+    "brand": "WaveStep",
+    "price": 26,
+    "rating": 4.7,
+    "stock": 19,
+    "description": "Comfortable summer sandals suitable for beach walks, casual outings, and vacation wear.",
+    "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=900&auto=format&fit=crop",
+    "category": "Footwear"
+  }
+]

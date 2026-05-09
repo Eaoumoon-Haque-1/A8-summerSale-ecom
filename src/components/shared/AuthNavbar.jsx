@@ -19,13 +19,12 @@ export default function AuthNavbar() {
             Back to Home
           </Link>
 
-          <Button
-            as={Link}
+          <Link
             href="/products"
-            className="rounded-full bg-orange-500 px-5 font-bold text-white"
+            className="rounded-full bg-orange-500 p-2.5 font-bold text-white"
           >
             Explore Products
-          </Button>
+          </Link>
         </div>
       </nav>
     </header>

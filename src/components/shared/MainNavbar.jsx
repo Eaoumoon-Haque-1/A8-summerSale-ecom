@@ -2,9 +2,17 @@
 
 import Link from "next/link";
 import { Avatar } from "@heroui/react";
+import { authClient } from "@/lib/auth-client";
 
 export default function MainNavbar() {
-  const isLoggedIn = false;
+  const user = authClient.useSession();
+  const userData = user?.data?.user;
+
+  const handleLogout = async () => {
+    await authClient.signOut();
+    window.location.href = "/"; // Redirect to home after logout
+  }
+  
 
   return (
     <header className="sticky top-0 z-50 border-b border-orange-100 bg-white/85 backdrop-blur-xl">
@@ -31,7 +39,7 @@ export default function MainNavbar() {
           </Link>
 
           <Link
-            href="/my-profile"
+            href="/profile"
             className="text-sm font-semibold text-slate-600 transition hover:text-orange-600"
           >
             My Profile
@@ -40,17 +48,19 @@ export default function MainNavbar() {
 
         {/* Auth Area */}
         <div className="flex items-center gap-3">
-          {isLoggedIn ? (
+          {userData ? (
             <>
-              <Avatar
-                size="sm"
-                src="https://i.pravatar.cc/150?img=12"
-                className="border-2 border-orange-300"
-              />
+               <Avatar size="sm">
+        <Avatar.Image 
+        alt={userData.name} 
+        src={userData.image} 
+        referrerPolicy="no-referrer"
+        />
+        <Avatar.Fallback>{userData.name.charAt(0)}</Avatar.Fallback>
+      </Avatar>
 
               <button
-                type="button"
-                className="rounded-full bg-orange-500 px-5 py-2 text-sm font-bold text-white transition hover:bg-orange-600"
+                onClick={handleLogout} size="sm" className="rounded-full bg-orange-500 px-5 py-2 text-sm font-bold text-white transition hover:bg-orange-600"
               >
                 Logout
               </button>

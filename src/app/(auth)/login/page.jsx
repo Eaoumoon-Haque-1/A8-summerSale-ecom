@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button, Card, Input } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
+import { FaGoogle } from "react-icons/fa6";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -45,7 +46,6 @@ export default function LoginPage() {
   const handleGoogleLogin = async () => {
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: "/",
     });
   };
 
@@ -94,13 +94,15 @@ export default function LoginPage() {
               required
             />
 
-            <Button
+            <div className="text-center ">
+              <Button
               type="submit"
               disabled={loading}
-              className="mt-2 h-12 rounded-full bg-orange-500 text-base font-bold text-white hover:bg-orange-600"
+              className="w-full bg-orange-500 text-white hover:bg-orange-600"
             >
               {loading ? "Logging in..." : "Login"}
             </Button>
+            </div>
           </form>
 
           <div className="my-6 flex items-center gap-3">
@@ -114,9 +116,9 @@ export default function LoginPage() {
           <button
             type="button"
             onClick={handleGoogleLogin}
-            className="h-12 w-full rounded-full border border-slate-200 bg-white text-sm font-bold text-slate-700 hover:bg-slate-50"
+            className="flex justify-center items-center h-12 w-full rounded-full border border-slate-200 bg-white text-sm font-bold text-slate-700 gap-2 hover:bg-slate-50"
           >
-            Continue with Google
+            <FaGoogle /> Continue with Google
           </button>
         </Card>
       </section>

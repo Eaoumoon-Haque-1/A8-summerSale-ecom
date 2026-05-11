@@ -1,4 +1,5 @@
 import AuthNavbar from "@/components/shared/AuthNavbar";
+import Footer from "@/components/shared/Footer";
 
 
 export default function AuthLayout({ children }) {
@@ -6,6 +7,7 @@ export default function AuthLayout({ children }) {
     <>
       <AuthNavbar />
       {children}
+      <Footer />
     </>
   );
 }

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Avatar } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
+import { PiSunHorizonFill } from "react-icons/pi";
 
 export default function MainNavbar() {
   const user = authClient.useSession();
@@ -18,8 +19,8 @@ export default function MainNavbar() {
     <header className="sticky top-0 z-50 border-b border-orange-100 bg-white/85 backdrop-blur-xl">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-black text-orange-600">
-          SunCart
+        <Link href="/" className="text-2xl font-black text-orange-600 flex items-center gap-1 ">
+           <PiSunHorizonFill className="text-5xl"/> SunCart
         </Link>
 
         {/* Desktop Links */}

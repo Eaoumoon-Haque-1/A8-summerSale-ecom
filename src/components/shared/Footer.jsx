@@ -6,6 +6,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa6";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
+import { PiSunHorizonFill } from "react-icons/pi";
 
 export default function Footer() {
   return (
@@ -14,8 +15,8 @@ export default function Footer() {
         <div className="grid gap-10 text-center md:grid-cols-3">
           {/* Brand */}
           <div className="flex flex-col items-center">
-            <Link href="/" className="text-4xl font-black text-orange-400">
-              SunCart
+            <Link href="/" className="text-4xl font-black text-orange-400 flex items-center gap-1 ">
+               <PiSunHorizonFill className="text-5xl"/> SunCart
             </Link>
 
             <p className="mt-4 max-w-sm text-sm leading-7 text-slate-300">
@@ -66,7 +67,7 @@ export default function Footer() {
 
               <p className="flex items-center justify-center gap-3">
                 <MdLocalPhone className="text-xl text-orange-400" />
-                +880 1234-567890
+                +8801234-567890
               </p>
             </div>
           </div>

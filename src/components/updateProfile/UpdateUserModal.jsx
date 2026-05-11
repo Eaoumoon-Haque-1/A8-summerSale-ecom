@@ -22,10 +22,7 @@ export function UpdateUserModal() {
           <Modal.Dialog className="sm:max-w-md">
             <Modal.CloseTrigger />
             <Modal.Header>
-              <Modal.Icon className="bg-accent-soft text-accent-soft-foreground">
-                <Envelope className="size-5" />
-              </Modal.Icon>
-              <Modal.Heading>Contact Us</Modal.Heading>
+              <Modal.Heading>Give Updated Informations</Modal.Heading>
             </Modal.Header>
             <Modal.Body className="p-6">
               <Surface variant="default">
